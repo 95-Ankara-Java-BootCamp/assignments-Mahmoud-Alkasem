@@ -15,21 +15,28 @@ public class Calculater {
                 "3 for / \n"+
                 "4 for x \n");
         int choice =scan.nextInt();
-
-        if (choice == 1)
-            System.out.println(n1+" + "+n2+" = "+ (n1+n2));
-        else if(choice == 2)
-            System.out.println(n1+" - "+n2+" = " + (n1-n2));
-        else if(choice == 3) {
-            if(n2==0)
-                System.out.println("you can't divide by zero");
-            else
-                System.out.println(n1+" / "+n2+" = " + (n1/n2));
+        switch(choice){
+            case 1:
+                System.out.println(n1+" + "+n2+" = "+ (n1+n2));
+                break;
+            case 2:
+                System.out.println(n1+" - "+n2+" = " + (n1-n2));
+                break;
+            case 3:
+                if (n2==0)
+                   System.out.println("you can't divide by zero");
+                else 
+                   System.out.println(n1+" / "+n2+" = " + (n1/n2));
+                break;
+            case 4:
+                System.out.println(n1+" x "+n2+" = " + (n1*n2));
+                break;
+            default:
+                System.out.println("you haven't provided valid choice ");
+                break;                      
         }
-        else if(choice == 4)
-            System.out.println(n1+" x "+n2+" = " + (n1*n2));
-        else
-            System.out.println("you haven't provided valid choice ");
+  
+       
 
     }
 
